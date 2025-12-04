@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Maa Kripa Pharma - Online Pharmacy</title>
-    <!-- If using Flask/Django, replace ../static with your static URL -->
-    <link rel="stylesheet" href="../static/style.css" />
+    <!-- Now index.html is in project root, so static path starts with ./static -->
+    <link rel="stylesheet" href="static/style.css" />
 </head>
 <body data-page="home">
 <header class="header">
@@ -17,8 +17,9 @@
     </div>
     <nav class="nav">
         <a href="index.html" class="active">Home</a>
-        <a href="produt.html">All Products</a>
-        <a href="cart.html" class="cart-link">
+        <!-- produt.html & cart.html are still inside /templates -->
+        <a href="templates/produt.html">All Products</a>
+        <a href="templates/cart.html" class="cart-link">
             Cart
             <span id="cart-count" class="cart-badge">0</span>
         </a>
@@ -35,8 +36,8 @@
                 Fast delivery, trusted brands, and dedicated support.
             </p>
             <div class="hero-actions">
-                <a href="produt.html" class="btn-primary">Shop Medicines</a>
-                <a href="cart.html" class="btn-secondary">View Cart</a>
+                <a href="templates/produt.html" class="btn-primary">Shop Medicines</a>
+                <a href="templates/cart.html" class="btn-secondary">View Cart</a>
             </div>
             <ul class="hero-highlights">
                 <li>✔ 100% genuine products</li>
@@ -65,19 +66,19 @@
             <p>Select a category and start adding items to your cart.</p>
         </div>
         <div class="category-grid">
-            <a href="produt.html#medicines" class="category-card">
+            <a href="templates/produt.html#medicines" class="category-card">
                 <h3>Medicines</h3>
                 <p>Tablets, capsules & more</p>
             </a>
-            <a href="produt.html#syrups" class="category-card">
+            <a href="templates/produt.html#syrups" class="category-card">
                 <h3>Syrups</h3>
                 <p>Cough, fever & supplements</p>
             </a>
-            <a href="produt.html#otc" class="category-card">
+            <a href="templates/produt.html#otc" class="category-card">
                 <h3>OTC Products</h3>
                 <p>Pain relief, sanitary, baby care</p>
             </a>
-            <a href="produt.html#personal-care" class="category-card">
+            <a href="templates/produt.html#personal-care" class="category-card">
                 <h3>Personal Care</h3>
                 <p>Skincare & hygiene</p>
             </a>
@@ -182,6 +183,6 @@
     </div>
 </footer>
 
-<script src="../static/script.js"></script>
+<script src="static/script.js"></script>
 </body>
 </html>
