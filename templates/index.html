@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Maa Kripa Pharma - Online Pharmacy</title>
+    <!-- If using Flask/Django, replace ../static with your static URL -->
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body data-page="home">
+<header class="header">
+    <div class="logo">
+        <span class="logo-pill">MK</span>
+        <div class="logo-text">
+            <h1>Maa Kripa Pharma</h1>
+            <p>Your trusted B2B pharmacy partner</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html" class="active">Home</a>
+        <a href="produt.html">All Products</a>
+        <a href="cart.html" class="cart-link">
+            Cart
+            <span id="cart-count" class="cart-badge">0</span>
+        </a>
+    </nav>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Wholesale Pharmacy for Clinics & Retailers</h2>
+            <p>
+                Order genuine medicines, syrups, and OTC products in bulk at best rates.
+                Fast delivery, trusted brands, and dedicated support.
+            </p>
+            <div class="hero-actions">
+                <a href="produt.html" class="btn-primary">Shop Medicines</a>
+                <a href="cart.html" class="btn-secondary">View Cart</a>
+            </div>
+            <ul class="hero-highlights">
+                <li>✔ 100% genuine products</li>
+                <li>✔ B2B bulk discounts</li>
+                <li>✔ Fast delivery</li>
+            </ul>
+        </div>
+        <div class="hero-illustration">
+            <div class="hero-card">
+                <h3>Today’s Special Offer</h3>
+                <p>On purchase of ₹10,000, get <strong>3% off</strong> on medicines & OTC products.</p>
+            </div>
+            <div class="hero-pill-grid">
+                <div class="pill pill-1"></div>
+                <div class="pill pill-2"></div>
+                <div class="pill pill-3"></div>
+                <div class="pill pill-4"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Select a category and start adding items to your cart.</p>
+        </div>
+        <div class="category-grid">
+            <a href="produt.html#medicines" class="category-card">
+                <h3>Medicines</h3>
+                <p>Tablets, capsules & more</p>
+            </a>
+            <a href="produt.html#syrups" class="category-card">
+                <h3>Syrups</h3>
+                <p>Cough, fever & supplements</p>
+            </a>
+            <a href="produt.html#otc" class="category-card">
+                <h3>OTC Products</h3>
+                <p>Pain relief, sanitary, baby care</p>
+            </a>
+            <a href="produt.html#personal-care" class="category-card">
+                <h3>Personal Care</h3>
+                <p>Skincare & hygiene</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="section">
+        <div class="section-header">
+            <h2>Featured Products</h2>
+            <p>Quick add to cart from homepage.</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <article class="product-card">
+                <div class="product-tag">Bestseller</div>
+                <div class="product-info">
+                    <h3>Paracetamol 650mg</h3>
+                    <p class="product-desc">Effective relief from fever & mild pain.</p>
+                    <p class="product-pack">Strip of 15 tablets</p>
+                    <p class="product-price">₹35.00</p>
+                </div>
+                <button
+                    class="btn-primary add-to-cart"
+                    data-id="P001"
+                    data-name="Paracetamol 650mg (15 tab)"
+                    data-price="35"
+                >
+                    Add to Cart
+                </button>
+            </article>
+
+            <!-- Product 2 -->
+            <article class="product-card">
+                <div class="product-tag tag-green">New</div>
+                <div class="product-info">
+                    <h3>ORS Glucose Powder</h3>
+                    <p class="product-desc">Rehydrate quickly during summers.</p>
+                    <p class="product-pack">Pack of 10 sachets</p>
+                    <p class="product-price">₹120.00</p>
+                </div>
+                <button
+                    class="btn-primary add-to-cart"
+                    data-id="P002"
+                    data-name="ORS Glucose Powder (10 sachets)"
+                    data-price="120"
+                >
+                    Add to Cart
+                </button>
+            </article>
+
+            <!-- Product 3 -->
+            <article class="product-card">
+                <div class="product-tag tag-blue">OTC</div>
+                <div class="product-info">
+                    <h3>Antiseptic Liquid</h3>
+                    <p class="product-desc">For first-aid, cuts and wounds.</p>
+                    <p class="product-pack">Bottle of 500 ml</p>
+                    <p class="product-price">₹95.00</p>
+                </div>
+                <button
+                    class="btn-primary add-to-cart"
+                    data-id="P003"
+                    data-name="Antiseptic Liquid 500ml"
+                    data-price="95"
+                >
+                    Add to Cart
+                </button>
+            </article>
+
+            <!-- Product 4 -->
+            <article class="product-card">
+                <div class="product-tag tag-orange">Baby Care</div>
+                <div class="product-info">
+                    <h3>Baby Diapers (M)</h3>
+                    <p class="product-desc">Soft, absorbent diapers for comfort.</p>
+                    <p class="product-pack">Pack of 40</p>
+                    <p class="product-price">₹480.00</p>
+                </div>
+                <button
+                    class="btn-primary add-to-cart"
+                    data-id="P004"
+                    data-name="Baby Diapers M (40 pcs)"
+                    data-price="480"
+                >
+                    Add to Cart
+                </button>
+            </article>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div>
+            <h3>Maa Kripa Pharma</h3>
+            <p>Near Hero Showroom, Narmadapuram</p>
+            <p>Contact: 9407150830 | maakripapharma2023@gmail.com</p>
+        </div>
+        <p class="footer-copy">© <span id="year"></span> Maa Kripa Pharma. All rights reserved.</p>
+    </div>
+</footer>
+
+<script src="../static/script.js"></script>
+</body>
+</html>

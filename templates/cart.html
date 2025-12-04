@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Your Cart - Maa Kripa Pharma</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body data-page="cart">
+<header class="header">
+    <div class="logo">
+        <span class="logo-pill">MK</span>
+        <div class="logo-text">
+            <h1>Maa Kripa Pharma</h1>
+            <p>Review & confirm your order</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="produt.html">All Products</a>
+        <a href="cart.html" class="cart-link active">
+            Cart
+            <span id="cart-count" class="cart-badge">0</span>
+        </a>
+    </nav>
+</header>
+
+<main>
+    <section class="section">
+        <div class="section-header">
+            <h2>Your Cart</h2>
+            <p>Update quantities or remove items before checkout.</p>
+        </div>
+
+        <div id="cart-empty" class="empty-cart hidden">
+            <p>Your cart is currently empty.</p>
+            <a href="produt.html" class="btn-primary">Browse Products</a>
+        </div>
+
+        <div id="cart-wrapper">
+            <div class="cart-layout">
+                <div class="cart-table-wrapper">
+                    <table class="cart-table">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price (₹)</th>
+                                <th>Qty</th>
+                                <th>Subtotal (₹)</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="cart-items">
+                            <!-- JS will insert rows -->
+                        </tbody>
+                    </table>
+                </div>
+
+                <aside class="cart-summary">
+                    <h3>Order Summary</h3>
+                    <div class="summary-row">
+                        <span>Items Total</span>
+                        <span>₹<span id="summary-subtotal">0.00</span></span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Estimated GST (12%)</span>
+                        <span>₹<span id="summary-gst">0.00</span></span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Grand Total</span>
+                        <span>₹<span id="summary-total">0.00</span></span>
+                    </div>
+                    <button id="btn-checkout" class="btn-primary btn-block">
+                        Place Order (Demo)
+                    </button>
+                    <p class="summary-note">
+                        * Actual taxes & discounts will be confirmed on final invoice.
+                    </p>
+                </aside>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="footer-content">
+        <p>For bulk orders, contact: 9407150830</p>
+        <p class="footer-copy">© <span id="year"></span> Maa Kripa Pharma.</p>
+    </div>
+</footer>
+
+<script src="../static/script.js"></script>
+</body>
+</html>
