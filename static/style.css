@@ -1,4 +1,4 @@
-/* ============ Base ============ */
+/* ============ Base Reset ============ */
 *,
 *::before,
 *::after {
@@ -35,7 +35,7 @@ body {
     flex-direction: column;
 }
 
-/* ============ Layout ============ */
+/* ============ Header & Nav ============ */
 
 .header {
     position: sticky;
@@ -133,11 +133,11 @@ main {
     padding: 1.5rem 6vw 3rem;
 }
 
-/* ============ Hero ============ */
+/* ============ Hero & Slider ============ */
 
 .hero {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(280px, 1.5fr);
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
     gap: 2.5rem;
     align-items: center;
     margin: 1.5rem 0 2.5rem;
@@ -167,51 +167,43 @@ main {
     gap: 0.25rem;
 }
 
-.hero-illustration {
+.hero-slider {
     position: relative;
-    display: grid;
-    gap: 1rem;
-    justify-items: center;
-}
-
-.hero-card {
-    background: var(--bg-card);
-    border-radius: 20px;
-    padding: 1.2rem 1.3rem;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    min-height: 230px;
     box-shadow: var(--shadow-soft);
-    max-width: 320px;
 }
 
-.hero-card h3 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
+.hero-slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transition: opacity 0.6s ease;
 }
 
-.hero-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.hero-pill-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
+.hero-slide img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
-.pill {
-    height: 38px;
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-slide-caption {
+    position: absolute;
+    left: 1.5rem;
+    bottom: 1.5rem;
+    padding: 0.75rem 1rem;
     border-radius: 999px;
-    background: linear-gradient(135deg, #e7f5ff, #d0ebff);
-    box-shadow: 0 12px 25px rgba(15, 23, 42, 0.1);
+    background: rgba(15, 23, 42, 0.85);
+    color: #fff;
+    font-size: 0.85rem;
 }
 
-.pill-1 { background: linear-gradient(135deg, #74c0fc, #22b8cf); }
-.pill-2 { background: linear-gradient(135deg, #69db7c, #38d9a9); }
-.pill-3 { background: linear-gradient(135deg, #ffd43b, #ffa94d); }
-.pill-4 { background: linear-gradient(135deg, #ff8787, #f783ac); }
-
-/* ============ Sections & Cards ============ */
+/* ============ Sections ============ */
 
 .section {
     margin: 2.5rem 0 0;
@@ -229,6 +221,12 @@ main {
 .section-header p {
     font-size: 0.9rem;
     color: var(--text-muted);
+}
+
+.section-alt {
+    background: #f9fafb;
+    margin: 2.5rem -6vw 0;
+    padding: 2rem 6vw 2.5rem;
 }
 
 /* Category cards */
@@ -264,6 +262,23 @@ main {
     transform: translateY(-3px);
     box-shadow: 0 16px 30px rgba(15, 23, 42, 0.12);
     border-color: var(--primary);
+}
+
+/* Experience cards */
+
+.experience-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+}
+
+.experience-card {
+    padding: 1.4rem;
+    border-radius: 1rem;
+    background: #ffffff;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+    font-size: 0.9rem;
+    line-height: 1.6;
 }
 
 /* Product cards */
@@ -304,32 +319,6 @@ main {
 .product-price {
     font-weight: 700;
     margin-top: 0.3rem;
-}
-
-.product-tag {
-    position: absolute;
-    top: 0.8rem;
-    right: 0.8rem;
-    font-size: 0.7rem;
-    padding: 0.2rem 0.55rem;
-    border-radius: 999px;
-    background: rgba(250, 82, 82, 0.1);
-    color: #e03131;
-}
-
-.tag-green {
-    background: rgba(55, 178, 77, 0.1);
-    color: var(--accent-green);
-}
-
-.tag-blue {
-    background: rgba(77, 171, 247, 0.1);
-    color: var(--accent-blue);
-}
-
-.tag-orange {
-    background: rgba(253, 126, 20, 0.1);
-    color: var(--accent-orange);
 }
 
 /* Buttons */
@@ -518,7 +507,7 @@ main {
     margin-top: auto;
     padding: 1.2rem 6vw 1.5rem;
     border-top: 1px solid rgba(226, 232, 240, 0.8);
-    background: rgba(248, 250, 252, 0.8);
+    background: rgba(248, 250, 252, 0.9);
 }
 
 .footer-content {
@@ -531,6 +520,57 @@ main {
 
 .footer-copy {
     font-size: 0.8rem;
+}
+
+/* Modern footer variant */
+
+.footer-modern {
+    margin-top: 3rem;
+    background: #0b3b8e;
+    color: #f9fafb;
+    padding-top: 2rem;
+}
+
+.footer-main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 2rem;
+    padding: 0 6vw 1.5rem;
+}
+
+.footer-col h4 {
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-col ul li {
+    margin-bottom: 0.4rem;
+}
+
+.footer-col a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.footer-col a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(148, 163, 184, 0.4);
+    text-align: center;
+    padding: 0.8rem 1rem 1.2rem;
+    font-size: 0.8rem;
+    color: #e5e7eb;
 }
 
 /* Utilities */
@@ -585,3 +625,62 @@ main {
         align-items: flex-start;
     }
 }
+
+/* ============ WhatsApp Floating Button ============ */
+
+.whatsapp-float {
+    position: fixed;
+    right: 18px;
+    bottom: 18px;
+    background: #25d366;
+    color: #ffffff;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.85rem;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.2);
+    z-index: 50;
+}
+.whatsapp-float span.icon {
+    font-size: 1.1rem;
+}
+.whatsapp-float:hover {
+    background: #1ebe5d;
+}
+
+/* ============ About Page Photos ============ */
+.about-photo {
+    width: 100%;
+    border-radius: 14px;
+    object-fit: cover;
+    max-height: 260px;
+    display: block;
+    margin-bottom: 0.6rem;
+}
+
+/* ============ Small form group utility (for cart & login) ============ */
+.form-group {
+    margin-bottom: 0.85rem;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border-radius: 0.5rem;
+    border: 1px solid var(--border);
+    font-size: 0.9rem;
+}
+.form-group textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+

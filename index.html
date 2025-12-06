@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8" />
     <title>Maa Kripa Pharma - Online Pharmacy</title>
-    <!-- Now index.html is in project root, so static path starts with ./static -->
     <link rel="stylesheet" href="static/style.css" />
 </head>
 <body data-page="home">
@@ -17,27 +16,29 @@
     </div>
     <nav class="nav">
         <a href="index.html" class="active">Home</a>
-        <!-- produt.html & cart.html are still inside /templates -->
-        <a href="templates/produt.html">All Products</a>
+        <a href="templates/product.html">All Products</a>
         <a href="templates/cart.html" class="cart-link">
             Cart
             <span id="cart-count" class="cart-badge">0</span>
         </a>
+        <a href="templates/about.html">About Us</a>
+        <a href="templates/login.html">Login</a>
     </nav>
 </header>
 
 <main>
-    <!-- Hero Section -->
+    <!-- HERO + SLIDER -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Wholesale Pharmacy for Clinics & Retailers</h2>
+            <h2>Wholesale Pharmacy for Retailers</h2>
             <p>
                 Order genuine medicines, syrups, and OTC products in bulk at best rates.
                 Fast delivery, trusted brands, and dedicated support.
             </p>
             <div class="hero-actions">
-                <a href="templates/produt.html" class="btn-primary">Shop Medicines</a>
+                <a href="templates/product.html" class="btn-primary">Shop Medicines</a>
                 <a href="templates/cart.html" class="btn-secondary">View Cart</a>
+                <a href="templates/about.html" class="btn-secondary">About Us</a>
             </div>
             <ul class="hero-highlights">
                 <li>✔ 100% genuine products</li>
@@ -45,141 +46,156 @@
                 <li>✔ Fast delivery</li>
             </ul>
         </div>
-        <div class="hero-illustration">
-            <div class="hero-card">
-                <h3>Today’s Special Offer</h3>
-                <p>On purchase of ₹10,000, get <strong>3% off</strong> on medicines & OTC products.</p>
+
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="https://images.pexels.com/photos/5910955/pexels-photo-5910955.jpeg" alt="Pharmacy shelves" />
+                <div class="hero-slide-caption">Full range of tablets & syrups</div>
             </div>
-            <div class="hero-pill-grid">
-                <div class="pill pill-1"></div>
-                <div class="pill pill-2"></div>
-                <div class="pill pill-3"></div>
-                <div class="pill pill-4"></div>
+            <div class="hero-slide">
+                <img src="https://images.pexels.com/photos/4047188/pexels-photo-4047188.jpeg" alt="Glucose and ORS" />
+                <div class="hero-slide-caption">Glucose & ORS focus for summers</div>
+            </div>
+            <div class="hero-slide">
+                <img src="https://images.pexels.com/photos/932577/pexels-photo-932577.jpeg" alt="Medicines" />
+                <div class="hero-slide-caption">Trusted brands and best margins</div>
             </div>
         </div>
     </section>
 
-    <!-- Categories -->
+    <!-- CATEGORIES -->
     <section class="section">
         <div class="section-header">
             <h2>Shop by Category</h2>
             <p>Select a category and start adding items to your cart.</p>
         </div>
         <div class="category-grid">
-            <a href="templates/produt.html#medicines" class="category-card">
-                <h3>Medicines</h3>
-                <p>Tablets, capsules & more</p>
+            <a href="templates/product.html#tablets" class="category-card">
+                <h3>Tablets</h3>
+                <p>GPP, Aristo, Glenmark, Alkem & more</p>
             </a>
-            <a href="templates/produt.html#syrups" class="category-card">
-                <h3>Syrups</h3>
-                <p>Cough, fever & supplements</p>
+            <a href="templates/product.html#syrup-tonic" class="category-card">
+                <h3>Syrups & Tonics</h3>
+                <p>Cough, fever & health tonics</p>
             </a>
-            <a href="templates/produt.html#otc" class="category-card">
-                <h3>OTC Products</h3>
-                <p>Pain relief, sanitary, baby care</p>
+            <a href="templates/product.html#general-otc" class="category-card">
+                <h3>OTC & General</h3>
+                <p>Pain balm, digestive, baby products</p>
             </a>
-            <a href="templates/produt.html#personal-care" class="category-card">
-                <h3>Personal Care</h3>
-                <p>Skincare & hygiene</p>
+            <a href="templates/product.html#glucose-ors" class="category-card">
+                <h3>Glucose & ORS</h3>
+                <p>Summer & dehydration range</p>
+            </a>
+            <a href="templates/product.html#candy-lozenges" class="category-card">
+                <h3>Candy & Lozenges</h3>
+                <p>Cofsils, Vicks & more</p>
+            </a>
+            <a href="templates/product.html#condoms-sildenafil" class="category-card">
+                <h3>Condoms & Sildenafil</h3>
+                <p>All major brands & packs</p>
             </a>
         </div>
     </section>
 
-    <!-- Featured Products -->
+    <!-- EXPERIENCE -->
+    <section class="section section-alt">
+        <div class="section-header">
+            <h2>Our Experience</h2>
+            <p>Personal support + strong business background in pharma wholesale.</p>
+        </div>
+        <div class="experience-grid">
+            <div class="experience-card">
+                <h3>👨‍💼 Personal Support</h3>
+                <p>
+                    We personally handle retailer and clinic orders, help in product selection,
+                    and guide for new launching brands so that your shelf never stays empty.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>🏬 Business Experience</h3>
+                <p>
+                    Multiple years of experience in B2B pharma supply – tablets, syrups,
+                    OTC, condoms, women care and seasonal products like ORS & glucose.
+                </p>
+            </div>
+            <div class="experience-card">
+                <h3>🤝 Brand Tie-ups</h3>
+                <p>
+                    We keep full ranges of GPP, Aristo, Glenmark, Danish, Alkem and
+                    all major condom brands so that you get better margins and fast moving items.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURED PRODUCTS (DYNAMIC) -->
     <section class="section">
         <div class="section-header">
-            <h2>Featured Products</h2>
-            <p>Quick add to cart from homepage.</p>
+            <h2>Popular Products</h2>
+            <p>These products are picked from your full range list.</p>
         </div>
-
-        <div class="product-grid">
-            <!-- Product 1 -->
-            <article class="product-card">
-                <div class="product-tag">Bestseller</div>
-                <div class="product-info">
-                    <h3>Paracetamol 650mg</h3>
-                    <p class="product-desc">Effective relief from fever & mild pain.</p>
-                    <p class="product-pack">Strip of 15 tablets</p>
-                    <p class="product-price">₹35.00</p>
-                </div>
-                <button
-                    class="btn-primary add-to-cart"
-                    data-id="P001"
-                    data-name="Paracetamol 650mg (15 tab)"
-                    data-price="35"
-                >
-                    Add to Cart
-                </button>
-            </article>
-
-            <!-- Product 2 -->
-            <article class="product-card">
-                <div class="product-tag tag-green">New</div>
-                <div class="product-info">
-                    <h3>ORS Glucose Powder</h3>
-                    <p class="product-desc">Rehydrate quickly during summers.</p>
-                    <p class="product-pack">Pack of 10 sachets</p>
-                    <p class="product-price">₹120.00</p>
-                </div>
-                <button
-                    class="btn-primary add-to-cart"
-                    data-id="P002"
-                    data-name="ORS Glucose Powder (10 sachets)"
-                    data-price="120"
-                >
-                    Add to Cart
-                </button>
-            </article>
-
-            <!-- Product 3 -->
-            <article class="product-card">
-                <div class="product-tag tag-blue">OTC</div>
-                <div class="product-info">
-                    <h3>Antiseptic Liquid</h3>
-                    <p class="product-desc">For first-aid, cuts and wounds.</p>
-                    <p class="product-pack">Bottle of 500 ml</p>
-                    <p class="product-price">₹95.00</p>
-                </div>
-                <button
-                    class="btn-primary add-to-cart"
-                    data-id="P003"
-                    data-name="Antiseptic Liquid 500ml"
-                    data-price="95"
-                >
-                    Add to Cart
-                </button>
-            </article>
-
-            <!-- Product 4 -->
-            <article class="product-card">
-                <div class="product-tag tag-orange">Baby Care</div>
-                <div class="product-info">
-                    <h3>Baby Diapers (M)</h3>
-                    <p class="product-desc">Soft, absorbent diapers for comfort.</p>
-                    <p class="product-pack">Pack of 40</p>
-                    <p class="product-price">₹480.00</p>
-                </div>
-                <button
-                    class="btn-primary add-to-cart"
-                    data-id="P004"
-                    data-name="Baby Diapers M (40 pcs)"
-                    data-price="480"
-                >
-                    Add to Cart
-                </button>
-            </article>
+        <div id="home-featured" class="product-grid">
+            <!-- script.js se auto load -->
         </div>
     </section>
 </main>
 
-<footer class="footer">
-    <div class="footer-content">
-        <div>
-            <h3>Maa Kripa Pharma</h3>
+<!-- WhatsApp floating button (direct chat) -->
+<a
+    href="https://wa.me/919407150830?text=Namaste%20Maa%20Kripa%20Pharma%2C%20mujhe%20order%20ya%20rate%20list%20ke%20bare%20me%20baat%20karni%20hai."
+    class="whatsapp-float"
+    target="_blank"
+>
+    <span class="icon">💬</span>
+    <span>Chat on WhatsApp</span>
+</a>
+
+<footer class="footer footer-modern">
+    <div class="footer-main">
+        <div class="footer-col">
+            <h4>Maa Kripa Pharma</h4>
             <p>Near Hero Showroom, Narmadapuram</p>
-            <p>Contact: 9407150830 | maakripapharma2023@gmail.com</p>
+            <p>Mob: 9407150830</p>
+            <p>Email: maakripapharma2023@gmail.com</p>
+            <p>DL No.: <strong>To be added</strong></p>
+            <p>GST No.: <strong>To be added</strong></p>
         </div>
-        <p class="footer-copy">© <span id="year"></span> Maa Kripa Pharma. All rights reserved.</p>
+
+        <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+                <li><a href="templates/product.html">All Products</a></li>
+                <li><a href="templates/cart.html">Cart</a></li>
+                <li><a href="templates/about.html">About Us</a></li>
+                <li><a href="templates/login.html">Login / Feedback</a></li>
+                <li>
+                    <a href="https://chat.whatsapp.com/YOUR_COMMUNITY_LINK_HERE" target="_blank">
+                        Join WhatsApp Community
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Focus Segments</h4>
+            <ul>
+                <li>Tablets & Capsules</li>
+                <li>Syrups & Tonics</li>
+                <li>OTC & Pain Relief</li>
+                <li>Glucose & ORS (Seasonal)</li>
+                <li>Condoms & Women Care</li>
+            </ul>
+        </div>
+
+        <div class="footer-col">
+            <h4>Stay Connected</h4>
+            <p style="font-size:0.9rem;">
+                For bulk orders and best rates, ping us on WhatsApp or call directly.
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> Maa Kripa Pharma. All rights reserved.</p>
     </div>
 </footer>
 

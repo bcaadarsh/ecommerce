@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Track Order - Maa Kripa Pharma</title>
+    <link rel="stylesheet" href="../static/style.css" />
+    <style>
+        .track-box {
+            max-width: 600px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+        .track-status {
+            margin-top: 1rem;
+            padding: 1rem;
+            background: #e7f5ff;
+            border-left: 6px solid #1c7ed6;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header">
+    <div class="logo">
+        <span class="logo-pill">MK</span>
+        <div class="logo-text">
+            <h1>Maa Kripa Pharma</h1>
+            <p>Order Tracking</p>
+        </div>
+    </div>
+
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="product.html">Products</a>
+        <a href="cart.html">Cart</a>
+        <a href="about.html">About Us</a>
+        <a class="active" href="track.html">Track Order</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section">
+        <div class="track-box">
+            <h2>Track Your Order</h2>
+            <p>Enter your invoice number below:</p>
+
+            <input id="invoice" type="text" placeholder="Enter Invoice No…" style="padding:10px;width:100%;border-radius:8px;border:1px solid #ccc;">
+            <button class="btn-primary btn-block" onclick="trackOrder()">Check Status</button>
+
+            <div id="result"></div>
+        </div>
+    </section>
+</main>
+
+<script>
+function trackOrder() {
+    const inv = document.getElementById("invoice").value.trim();
+    const res = document.getElementById("result");
+
+    if (!inv) {
+        res.innerHTML = "<p style='color:red;'>Please enter invoice number.</p>";
+        return;
+    }
+
+    if (inv === "DEMO123") {
+        res.innerHTML = `
+            <div class="track-status">
+                <h3>Status: Packed & Ready</h3>
+                <p>Your order is packed. Invoice generated.</p>
+                <p><b>Delivery:</b> Today evening</p>
+            </div>`;
+    } else {
+        res.innerHTML = `
+            <div class="track-status">
+                <h3>Status Not Found</h3>
+                <p>Your invoice is not in our demo database.</p>
+                <p>Full tracking will work after backend update.</p>
+            </div>`;
+    }
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>All Products - Maa Kripa Pharma</title>
+    <link rel="stylesheet" href="../static/style.css" />
+</head>
+<body data-page="products">
+<header class="header">
+    <div class="logo">
+        <span class="logo-pill">MK</span>
+        <div class="logo-text">
+            <h1>Maa Kripa Pharma</h1>
+            <p>Bulk orders, better margins</p>
+        </div>
+    </div>
+    <nav class="nav">
+        <a href="../index.html">Home</a>
+        <a href="product.html" class="active">All Products</a>
+        <a href="cart.html" class="cart-link">
+            Cart
+            <span id="cart-count" class="cart-badge">0</span>
+        </a>
+        <a href="login.html">Login</a>
+    </nav>
+</header>
+
+<main>
+    <section class="section">
+        <div class="section-header">
+            <h2>All Products</h2>
+            <p>Search by name and filter by category. All items are from your rate list.</p>
+        </div>
+
+        <div class="filters">
+            <label>
+                Search:
+                <input type="text" id="search-input" placeholder="Search product name..." />
+            </label>
+
+            <label>
+                Category:
+                <select id="category-filter">
+                    <option value="all">All</option>
+                    <option value="tablets">Tablets</option>
+                    <option value="syrup-tonic">Syrups / Tonics</option>
+                    <option value="general-otc">General / OTC</option>
+                    <option value="pain-relief">Pain Relief Gels</option>
+                    <option value="glucose-ors">Glucose / ORS</option>
+                    <option value="candy-lozenges">Candy / Lozenges</option>
+                    <option value="condoms-sildenafil">Condoms / Sildenafil</option>
+                </select>
+            </label>
+        </div>
+
+        <!-- Anchors for home page category links -->
+        <div id="tablets"></div>
+        <div id="syrup-tonic"></div>
+        <div id="general-otc"></div>
+        <div id="pain-relief"></div>
+        <div id="glucose-ors"></div>
+        <div id="candy-lozenges"></div>
+        <div id="condoms-sildenafil"></div>
+
+        <div id="product-list" class="product-grid">
+            <!-- script.js yahan sari product cards dalega -->
+        </div>
+    </section>
+</main>
+
+<footer class="footer footer-modern">
+    <div class="footer-main">
+        <div class="footer-col">
+            <h4>Maa Kripa Pharma</h4>
+            <p>Near Hero Showroom, Narmadapuram</p>
+            <p>Mob: 9407150830</p>
+            <p>Email: maakripapharma2023@gmail.com</p>
+            <p>DL No.: <strong>To be added</strong></p>
+            <p>GST No.: <strong>To be added</strong></p>
+        </div>
+        <div class="footer-col">
+            <h4>Shortcuts</h4>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="cart.html">View Cart</a></li>
+                <li><a href="login.html">Login / Feedback</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Categories</h4>
+            <ul>
+                <li>Tablets & Capsules</li>
+                <li>Syrups & Tonics</li>
+                <li>OTC & Pain Relief</li>
+                <li>Glucose & ORS</li>
+                <li>Condoms & Women Care</li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>Contact Hours</h4>
+            <p style="font-size:0.9rem;">
+                Call / WhatsApp for rates and stock updates during business hours.
+            </p>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© <span id="year"></span> Maa Kripa Pharma.</p>
+    </div>
+</footer>
+
+<script src="../static/script.js"></script>
+</body>
+</html>
